@@ -27,8 +27,17 @@ npm run build
 
 ## Деплой на GitHub Pages
 
-1. В репозитории на GitHub: **Settings → Pages → Build and deployment → Source** → `GitHub Actions`.
-2. Убедитесь, что `base` в [`vite.config.ts`](vite.config.ts) совпадает с именем репозитория (`/rituals/`).
-3. Запушьте код в ветку `main` — workflow опубликует приложение автоматически.
+### Один раз в настройках репозитория
 
-Сайт будет доступен по адресу: `https://<username>.github.io/rituals/`
+1. Откройте **Settings → Pages**.
+2. В блоке **Build and deployment** в поле **Source** выберите **GitHub Actions** (не «Deploy from a branch»).
+3. Если репозиторий **private**, для Pages нужен платный план GitHub — на бесплатном тарифе Pages работает только для **public** репозиториев.
+
+### Публикация
+
+1. Убедитесь, что `base` в [`vite.config.ts`](vite.config.ts) совпадает с именем репозитория (`/rituals/`).
+2. Запушьте код в `main` — запустится workflow **Deploy to GitHub Pages**.
+3. Если deploy упал с `Get Pages site failed`, вернитесь к шагу 1: Pages ещё не включены.
+4. При необходимости: **Actions** → failed run → **Re-run all jobs**.
+
+Сайт: `https://<username>.github.io/rituals/`
