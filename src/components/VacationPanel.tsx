@@ -18,22 +18,24 @@ export function VacationPanel({
 
   return (
     <div className={styles.panel}>
-      {VACATION_PARTICIPANTS.map((participant) => {
-        const active = isOnVacation(participant);
+      <p className={styles.subtitle}>На этой неделе в отпуске</p>
+      <div className={styles.buttons}>
+        {VACATION_PARTICIPANTS.map((participant) => {
+          const active = isOnVacation(participant);
 
-        return (
-          <button
-            key={participant}
-            type="button"
-            className={`${styles.button} ${active ? styles.active : ''}`}
-            onClick={() => onToggle(participant)}
-          >
-            {active
-              ? `${participant} — в отпуске`
-              : `${participant}: На этой неделе в отпуске`}
-          </button>
-        );
-      })}
+          return (
+            <button
+              key={participant}
+              type="button"
+              className={`${styles.button} ${active ? styles.active : ''}`}
+              onClick={() => onToggle(participant)}
+              aria-pressed={active}
+            >
+              {participant}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }

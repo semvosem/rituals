@@ -54,7 +54,7 @@ export function ArchivePage() {
           <Link className={styles.backLink} to="/">
             ← Назад
           </Link>
-          <h1 className={styles.heading}>Архив</h1>
+          <h1 className={styles.heading}>Прошедшие недели</h1>
         </div>
 
         {archive.length === 0 ? (

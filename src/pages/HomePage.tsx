@@ -12,26 +12,27 @@ export function HomePage() {
   return (
     <main className={styles.page}>
       <div className={styles.card}>
-        <h1 className={styles.heading}>Ритуалы для команды</h1>
+        <h1 className={styles.heading}>Модераторы командных ритуалов Omni</h1>
 
         <div className={styles.weeks}>
-          <WeekSection
-            title={`Сейчас идет ${schedules.currentWeek.weekNumber} неделя`}
-            schedule={schedules.currentWeek}
-          />
-          <WeekSection title="На следующей" schedule={schedules.nextWeek} />
+          <WeekSection title="Эта неделя" schedule={schedules.currentWeek} />
+          <WeekSection title="Следующая" schedule={schedules.nextWeek} />
         </div>
 
         <div className={styles.actions}>
           <button
             type="button"
-            className={`${styles.vacationButton} ${vacationOpen ? styles.vacationButtonActive : ''}`}
+            className={`${styles.actionButton} ${vacationOpen ? styles.actionButtonActive : ''}`}
             onClick={() => setVacationOpen((open) => !open)}
           >
-            Модератор в отпуске
+            Выбрать отпуск
+            <span
+              className={`${styles.chevron} ${vacationOpen ? styles.chevronOpen : ''}`}
+              aria-hidden
+            />
           </button>
-          <Link className={styles.archiveLink} to="/archive">
-            Архив
+          <Link className={styles.actionButton} to="/archive">
+            Прошедшие недели
           </Link>
         </div>
 
