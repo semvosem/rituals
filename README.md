@@ -28,7 +28,7 @@ npm run build
 ## Деплой на GitHub Pages
 
 1. В репозитории на GitHub: **Settings → Pages → Build and deployment → Source** → `GitHub Actions`.
-2. Убедитесь, что репозиторий называется `Rituals` (или обновите `base` в [`vite.config.ts`](vite.config.ts)).
+2. Убедитесь, что `base` в [`vite.config.ts`](vite.config.ts) совпадает с именем репозитория (`/rituals/`).
 3. Запушьте код в ветку `main` — workflow опубликует приложение автоматически.
 
-Сайт будет доступен по адресу: `https://<username>.github.io/Rituals/`
+Сайт будет доступен по адресу: `https://<username>.github.io/rituals/`
