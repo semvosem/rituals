@@ -1,0 +1,76 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 16px;
+  background: var(--color-bg);
+}
+
+.card {
+  width: min(100%, 475px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.heading {
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 31px;
+}
+
+.weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .weeks {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.vacationButton {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.vacationButton:hover,
+.vacationButtonActive {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.archiveLink {
+  color: var(--color-text);
+  font: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 6px 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.archiveLink:hover {
+  color: var(--color-accent);
+}

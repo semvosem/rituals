@@ -1,0 +1,27 @@
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.button {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.active {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}

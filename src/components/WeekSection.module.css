@@ -1,0 +1,36 @@
+.section {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-text-secondary);
+}
+
+.table {
+  display: flex;
+  gap: 12px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cell {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.empty {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
